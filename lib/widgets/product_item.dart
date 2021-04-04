@@ -45,6 +45,7 @@ class ProductItem extends StatelessWidget {
           title: Text(
             product.title,
             textAlign: TextAlign.center,
+            softWrap: true,
           ),
           trailing: IconButton(
             icon: Icon(Icons.shopping_cart),
