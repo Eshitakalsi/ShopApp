@@ -188,6 +188,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                     title: _editedProduct.title,
                     price: _editedProduct.price,
                     description: value,
+                    imageUrl: _editedProduct.imageUrl,
                     id: _editedProduct.id,
                     isFavorite: _editedProduct.isFavorite,
                   );
