@@ -31,7 +31,9 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
       });
 
       Provider.of<Products>(context).fetchAndSetProducts().then((_) {
-        _isLoading = false;
+        setState(() {
+          _isLoading = false;
+        });
       });
     }
     _isInit = false;
@@ -61,8 +63,9 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
             ),
             itemBuilder: (_) => [
               PopupMenuItem(
-                  child: Text('Only favourites'),
-                  value: FilterOptons.Favorites),
+                child: Text('Only favourites'),
+                value: FilterOptons.Favorites,
+              ),
               PopupMenuItem(
                 child: Text('Show All'),
                 value: FilterOptons.All,
